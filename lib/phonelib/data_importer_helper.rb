@@ -58,7 +58,7 @@ module Phonelib
         #line = str_clean line
         #next if line.empty? || line[0] == '#'
         prefix, line_data = line.split('|')
-        data[prefix] = line_data && line_data.strip.split('&')
+        data[prefix] = line_data && line_data.split('&')
       end
       data
     end
