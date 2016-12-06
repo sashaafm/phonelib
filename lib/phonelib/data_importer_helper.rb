@@ -53,15 +53,6 @@ module Phonelib
 
     # method parses raw data file
     def parse_raw_file(file)
-      data = {}
-      File.readlines(file).each do |line|
-	puts line
-        #line = str_clean line
-        #next if line.empty? || line[0] == '#'
-        prefix, line_data = line.split('|')
-        data[prefix] = line_data && line_data.split('&')
-      end
-      data
     end
 
     # get main body from parsed xml document
